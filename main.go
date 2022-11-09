@@ -12,14 +12,14 @@ import (
 
 
 
-var Blockch *models.BlockChain
+var blockch *models.BlockChain
 
 
 
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/book", controllers.newBook).Methods("POST")
+	r.HandleFunc("/book", controllers.NewBook).Methods("POST")
 	r.HandleFunc("/", getBlockchain).Methods("GET")
 	r.HandleFunc("/issue", writeBlock).Methods("POST")
 

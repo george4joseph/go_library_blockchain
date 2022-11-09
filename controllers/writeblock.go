@@ -8,6 +8,7 @@ import (
 	"github.com/george4joseph/go_library_blockchain/models"
 )
 
+var bc *models.BlockChain
 func writeBlock(w http.ResponseWriter, r *http.Request) {
 	var bookissue models.BookIssue
 
@@ -18,9 +19,12 @@ func writeBlock(w http.ResponseWriter, r *http.Request) {
 
 	}
 
-	models.BlockChain.AddBlock(data bookissue)
+	bc.AddBlock(bookissue)
 
 }
+
+
+
 
 
 

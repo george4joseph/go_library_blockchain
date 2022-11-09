@@ -11,7 +11,7 @@ import (
 	"github.com/george4joseph/go_library_blockchain/models"
 )
 
-func newBook(w http.ResponseWriter, r *http.Request) {
+func NewBook(w http.ResponseWriter, r *http.Request) {
 	var book models.Book
 
 	if err := json.NewDecoder(r.Body).Decode(&book); err != nil {
